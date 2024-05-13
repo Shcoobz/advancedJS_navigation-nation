@@ -7,9 +7,9 @@ import Section from './components/Section';
 function App() {
   const [isActive, setIsActive] = useState(false);
 
-  const toggleNav = () => {
+  function toggleNav() {
     setIsActive(!isActive);
-  };
+  }
 
   return (
     <div>

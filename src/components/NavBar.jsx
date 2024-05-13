@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Navbar({ isActive, toggleNav }) {
   const navAnimation = (direction1, direction2) => {
     return isActive ? `slide-${direction2}-` : `slide-${direction1}-`;
@@ -32,5 +34,10 @@ function Navbar({ isActive, toggleNav }) {
     </div>
   );
 }
+
+Navbar.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  toggleNav: PropTypes.func.isRequired,
+};
 
 export default Navbar;

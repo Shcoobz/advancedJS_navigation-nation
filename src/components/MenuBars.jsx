@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function MenuBars({ toggleNav, isActive }) {
   return (
     <div
@@ -10,5 +12,10 @@ function MenuBars({ toggleNav, isActive }) {
     </div>
   );
 }
+
+MenuBars.propTypes = {
+  toggleNav: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
+};
 
 export default MenuBars;
