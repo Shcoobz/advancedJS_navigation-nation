@@ -1,11 +1,19 @@
+import { useState } from 'react';
+
 import MenuBars from './components/MenuBars';
 import Navbar from './components/NavBar';
 import Section from './components/Section';
 
 function App() {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleNav = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <div>
-      <MenuBars />
+      <MenuBars toggleNav={toggleNav} isActive={isActive} />
       <Navbar />
       <Section
         id='home'
