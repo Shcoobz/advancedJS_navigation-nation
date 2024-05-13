@@ -1,6 +1,6 @@
 # react_Navigation Nation: [LIVE DEMO](https://shcoobz.github.io/react_navigation-nation/)
 
-![React Navigation Nation](public/img/react-navigation-nation.png)
+![React Navigation Nation](public/img/react_navigation-nation.png)
 
 ## Summary
 
