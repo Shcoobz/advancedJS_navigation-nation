@@ -1,10 +1,27 @@
 import PropTypes from 'prop-types';
 
+/**
+ * Navigation component that handles the display of different navigation items based on the active state.
+ * Animates the navigation overlay in and out based on user interactions.
+ * @param {object} props - Component properties.
+ * @param {boolean} props.isActive - Boolean indicating if the navigation is active, used to determine animation styles.
+ * @param {Function} props.toggleNav - Function to toggle the navigation state, used when a nav item is clicked.
+ */
 function Navbar({ isActive, toggleNav }) {
+  /**
+   * Determines the animation class for the navigation items based on the active state.
+   * @param {string} direction1 - Initial direction of the animation when inactive.
+   * @param {string} direction2 - Direction of the animation when active.
+   * @returns {string} - The appropriate animation class name.
+   */
   const navAnimation = (direction1, direction2) => {
     return isActive ? `slide-${direction2}-` : `slide-${direction1}-`;
   };
 
+  /**
+   * List of navigation items.
+   * @const {Array<object>} navItems - Array containing navigation items details such as ID, text, and link.
+   */
   const navItems = [
     { id: 'nav-1', text: 'Home', link: '#home' },
     { id: 'nav-2', text: 'About', link: '#about' },

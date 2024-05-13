@@ -4,9 +4,22 @@ import MenuBars from './components/MenuBars';
 import Navbar from './components/NavBar';
 import Section from './components/Section';
 
+/**
+ * Main application component that manages navigation state and renders different sections of the website.
+ * Utilizes React hooks for state management.
+ */
 function App() {
+  /**
+   * Represents whether the navigation is active or not.
+   * @const {boolean} isActive - Boolean state to track if the navigation is currently active.
+   */
   const [isActive, setIsActive] = useState(false);
 
+  /**
+   * Toggles the navigation active state.
+   * @function toggleNav
+   * @returns {void}
+   */
   function toggleNav() {
     setIsActive(!isActive);
   }
