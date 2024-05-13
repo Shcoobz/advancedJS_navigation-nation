@@ -1,4 +1,4 @@
-function Navbar({ isActive }) {
+function Navbar({ isActive, toggleNav }) {
   const navAnimation = (direction1, direction2) => {
     return isActive ? `slide-${direction2}-` : `slide-${direction1}-`;
   };
@@ -22,7 +22,9 @@ function Navbar({ isActive }) {
               key={item.id}
               id={item.id}
               className={`${navAnimation('out', 'in')}${index + 1}`}>
-              <a href={item.link}>{item.text}</a>
+              <a href={item.link} onClick={toggleNav}>
+                {item.text}
+              </a>
             </li>
           ))}
         </ul>

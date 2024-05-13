@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <MenuBars toggleNav={toggleNav} isActive={isActive} />
-      <Navbar isActive={isActive} />
+      <Navbar isActive={isActive} toggleNav={toggleNav} />
       <Section id='home'>
         <a href='https://shcoobz.github.io/' target='_blank'>
           Project Portfolio
