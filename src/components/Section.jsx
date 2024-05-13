@@ -1,11 +1,5 @@
-function Section({ id, children, style, color }) {
-  const sectionStyle = { ...style, backgroundColor: color };
-
-  return (
-    <section id={id} style={sectionStyle}>
-      {children}
-    </section>
-  );
+function Section({ id, children }) {
+  return <section id={id}>{children}</section>;
 }
 
 export default Section;

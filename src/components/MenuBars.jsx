@@ -1,12 +1,4 @@
-import { useState } from 'react';
-
-function MenuBars() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleNav = () => {
-    setIsActive(!isActive);
-  };
-
+function MenuBars({ toggleNav, isActive }) {
   return (
     <div
       className={`menu-bars${isActive ? ' change' : ''}`}

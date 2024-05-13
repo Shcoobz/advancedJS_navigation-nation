@@ -1,4 +1,8 @@
-function Navbar() {
+function Navbar({ isActive }) {
+  const navAnimation = (direction1, direction2) => {
+    return isActive ? `slide-${direction2}-` : `slide-${direction1}-`;
+  };
+
   const navItems = [
     { id: 'nav-1', text: 'Home', link: '#home' },
     { id: 'nav-2', text: 'About', link: '#about' },
@@ -8,11 +12,16 @@ function Navbar() {
   ];
 
   return (
-    <div className='overlay overlay-slide-left' id='overlay'>
+    <div
+      className={`overlay${isActive ? ' overlay-slide-right' : ' overlay-slide-left'}`}
+      id='overlay'>
       <nav>
         <ul>
           {navItems.map((item, index) => (
-            <li key={item.id} id={item.id} className={`slide-out-${index + 1}`}>
+            <li
+              key={item.id}
+              id={item.id}
+              className={`${navAnimation('out', 'in')}${index + 1}`}>
               <a href={item.link}>{item.text}</a>
             </li>
           ))}
